@@ -1,7 +1,7 @@
 import { Stack } from "expo-router";
 
-export const layOut = () => {
+const LayOut = () => {
   return <Stack />;
 };
 
-export default layOut();
+export default LayOut; // Export the component itself, not the result of invoking it
