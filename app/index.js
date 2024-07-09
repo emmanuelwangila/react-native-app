@@ -8,15 +8,27 @@ import {
   Nearbyjobs,
   Popularjobs,
   Welcome,
-  ScreenHeaderbtn,
+  ScreenHeaderBtn,
 } from "../components";
 
 const Home = () => {
   const router = useRouter();
 
   return (
-    <SafeAreaView>
-      <Text>Home</Text>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
+      <Stack.Screen
+        options={{
+          headerStyle: { backgroundColor: COLORS.lightWhite },
+          headerShadowVisible: false,
+          headerLeft: () => {
+            <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />;
+          },
+          headerRight: () => {
+            <ScreenHeaderBtn iconUrl={icons.header} dimension="100%" />;
+          },
+          headerBackTitle: "",
+        }}
+      />
     </SafeAreaView>
   );
 };
